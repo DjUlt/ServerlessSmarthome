@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6B3DBB02AE049E30095A46C /* ServerlessSmarthomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBAF2AE049E30095A46C /* ServerlessSmarthomeApp.swift */; };
+		C6B3DBB22AE049E30095A46C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBB12AE049E30095A46C /* ContentView.swift */; };
+		C6B3DBB42AE049E30095A46C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBB32AE049E30095A46C /* Item.swift */; };
+		C6B3DBB62AE049E50095A46C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B3DBB52AE049E50095A46C /* Assets.xcassets */; };
+		C6B3DBB92AE049E50095A46C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B3DBB82AE049E50095A46C /* Preview Assets.xcassets */; };
+		C6B3DBC32AE049E50095A46C /* ServerlessSmarthomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBC22AE049E50095A46C /* ServerlessSmarthomeTests.swift */; };
+		C6B3DBCD2AE049E50095A46C /* ServerlessSmarthomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBCC2AE049E50095A46C /* ServerlessSmarthomeUITests.swift */; };
+		C6B3DBCF2AE049E50095A46C /* ServerlessSmarthomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBCE2AE049E50095A46C /* ServerlessSmarthomeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C6B3DBBF2AE049E50095A46C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B3DBA42AE049E30095A46C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6B3DBAB2AE049E30095A46C;
+			remoteInfo = ServerlessSmarthome;
+		};
+		C6B3DBC92AE049E50095A46C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B3DBA42AE049E30095A46C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6B3DBAB2AE049E30095A46C;
+			remoteInfo = ServerlessSmarthome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C6B3DBAC2AE049E30095A46C /* ServerlessSmarthome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServerlessSmarthome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B3DBAF2AE049E30095A46C /* ServerlessSmarthomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerlessSmarthomeApp.swift; sourceTree = "<group>"; };
+		C6B3DBB12AE049E30095A46C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6B3DBB32AE049E30095A46C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		C6B3DBB52AE049E50095A46C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6B3DBB82AE049E50095A46C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C6B3DBBE2AE049E50095A46C /* ServerlessSmarthomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServerlessSmarthomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B3DBC22AE049E50095A46C /* ServerlessSmarthomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerlessSmarthomeTests.swift; sourceTree = "<group>"; };
+		C6B3DBC82AE049E50095A46C /* ServerlessSmarthomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServerlessSmarthomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6B3DBCC2AE049E50095A46C /* ServerlessSmarthomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerlessSmarthomeUITests.swift; sourceTree = "<group>"; };
+		C6B3DBCE2AE049E50095A46C /* ServerlessSmarthomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerlessSmarthomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6B3DBA92AE049E30095A46C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B3DBBB2AE049E50095A46C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B3DBC52AE049E50095A46C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6B3DBA32AE049E30095A46C = {
+			isa = PBXGroup;
+			children = (
+				C6B3DBAE2AE049E30095A46C /* ServerlessSmarthome */,
+				C6B3DBC12AE049E50095A46C /* ServerlessSmarthomeTests */,
+				C6B3DBCB2AE049E50095A46C /* ServerlessSmarthomeUITests */,
+				C6B3DBAD2AE049E30095A46C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6B3DBAD2AE049E30095A46C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6B3DBAC2AE049E30095A46C /* ServerlessSmarthome.app */,
+				C6B3DBBE2AE049E50095A46C /* ServerlessSmarthomeTests.xctest */,
+				C6B3DBC82AE049E50095A46C /* ServerlessSmarthomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6B3DBAE2AE049E30095A46C /* ServerlessSmarthome */ = {
+			isa = PBXGroup;
+			children = (
+				C6B3DBAF2AE049E30095A46C /* ServerlessSmarthomeApp.swift */,
+				C6B3DBB12AE049E30095A46C /* ContentView.swift */,
+				C6B3DBB32AE049E30095A46C /* Item.swift */,
+				C6B3DBB52AE049E50095A46C /* Assets.xcassets */,
+				C6B3DBB72AE049E50095A46C /* Preview Content */,
+			);
+			path = ServerlessSmarthome;
+			sourceTree = "<group>";
+		};
+		C6B3DBB72AE049E50095A46C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C6B3DBB82AE049E50095A46C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C6B3DBC12AE049E50095A46C /* ServerlessSmarthomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6B3DBC22AE049E50095A46C /* ServerlessSmarthomeTests.swift */,
+			);
+			path = ServerlessSmarthomeTests;
+			sourceTree = "<group>";
+		};
+		C6B3DBCB2AE049E50095A46C /* ServerlessSmarthomeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C6B3DBCC2AE049E50095A46C /* ServerlessSmarthomeUITests.swift */,
+				C6B3DBCE2AE049E50095A46C /* ServerlessSmarthomeUITestsLaunchTests.swift */,
+			);
+			path = ServerlessSmarthomeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6B3DBAB2AE049E30095A46C /* ServerlessSmarthome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6B3DBD22AE049E50095A46C /* Build configuration list for PBXNativeTarget "ServerlessSmarthome" */;
+			buildPhases = (
+				C6B3DBA82AE049E30095A46C /* Sources */,
+				C6B3DBA92AE049E30095A46C /* Frameworks */,
+				C6B3DBAA2AE049E30095A46C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ServerlessSmarthome;
+			productName = ServerlessSmarthome;
+			productReference = C6B3DBAC2AE049E30095A46C /* ServerlessSmarthome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6B3DBBD2AE049E50095A46C /* ServerlessSmarthomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6B3DBD52AE049E50095A46C /* Build configuration list for PBXNativeTarget "ServerlessSmarthomeTests" */;
+			buildPhases = (
+				C6B3DBBA2AE049E50095A46C /* Sources */,
+				C6B3DBBB2AE049E50095A46C /* Frameworks */,
+				C6B3DBBC2AE049E50095A46C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6B3DBC02AE049E50095A46C /* PBXTargetDependency */,
+			);
+			name = ServerlessSmarthomeTests;
+			productName = ServerlessSmarthomeTests;
+			productReference = C6B3DBBE2AE049E50095A46C /* ServerlessSmarthomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C6B3DBC72AE049E50095A46C /* ServerlessSmarthomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6B3DBD82AE049E50095A46C /* Build configuration list for PBXNativeTarget "ServerlessSmarthomeUITests" */;
+			buildPhases = (
+				C6B3DBC42AE049E50095A46C /* Sources */,
+				C6B3DBC52AE049E50095A46C /* Frameworks */,
+				C6B3DBC62AE049E50095A46C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6B3DBCA2AE049E50095A46C /* PBXTargetDependency */,
+			);
+			name = ServerlessSmarthomeUITests;
+			productName = ServerlessSmarthomeUITests;
+			productReference = C6B3DBC82AE049E50095A46C /* ServerlessSmarthomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6B3DBA42AE049E30095A46C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					C6B3DBAB2AE049E30095A46C = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					C6B3DBBD2AE049E50095A46C = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C6B3DBAB2AE049E30095A46C;
+					};
+					C6B3DBC72AE049E50095A46C = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = C6B3DBAB2AE049E30095A46C;
+					};
+				};
+			};
+			buildConfigurationList = C6B3DBA72AE049E30095A46C /* Build configuration list for PBXProject "ServerlessSmarthome" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C6B3DBA32AE049E30095A46C;
+			productRefGroup = C6B3DBAD2AE049E30095A46C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6B3DBAB2AE049E30095A46C /* ServerlessSmarthome */,
+				C6B3DBBD2AE049E50095A46C /* ServerlessSmarthomeTests */,
+				C6B3DBC72AE049E50095A46C /* ServerlessSmarthomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6B3DBAA2AE049E30095A46C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B3DBB92AE049E50095A46C /* Preview Assets.xcassets in Resources */,
+				C6B3DBB62AE049E50095A46C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B3DBBC2AE049E50095A46C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B3DBC62AE049E50095A46C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6B3DBA82AE049E30095A46C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B3DBB22AE049E30095A46C /* ContentView.swift in Sources */,
+				C6B3DBB42AE049E30095A46C /* Item.swift in Sources */,
+				C6B3DBB02AE049E30095A46C /* ServerlessSmarthomeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B3DBBA2AE049E50095A46C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B3DBC32AE049E50095A46C /* ServerlessSmarthomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6B3DBC42AE049E50095A46C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6B3DBCD2AE049E50095A46C /* ServerlessSmarthomeUITests.swift in Sources */,
+				C6B3DBCF2AE049E50095A46C /* ServerlessSmarthomeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C6B3DBC02AE049E50095A46C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6B3DBAB2AE049E30095A46C /* ServerlessSmarthome */;
+			targetProxy = C6B3DBBF2AE049E50095A46C /* PBXContainerItemProxy */;
+		};
+		C6B3DBCA2AE049E50095A46C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6B3DBAB2AE049E30095A46C /* ServerlessSmarthome */;
+			targetProxy = C6B3DBC92AE049E50095A46C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C6B3DBD02AE049E50095A46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C6B3DBD12AE049E50095A46C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6B3DBD32AE049E50095A46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ServerlessSmarthome/Preview Content\"";
+				DEVELOPMENT_TEAM = VTLM3BU8F9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = djult.ServerlessSmarthome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C6B3DBD42AE049E50095A46C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ServerlessSmarthome/Preview Content\"";
+				DEVELOPMENT_TEAM = VTLM3BU8F9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = djult.ServerlessSmarthome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C6B3DBD62AE049E50095A46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4655SQ727H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.ServerlessSmarthomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ServerlessSmarthome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ServerlessSmarthome";
+			};
+			name = Debug;
+		};
+		C6B3DBD72AE049E50095A46C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4655SQ727H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.ServerlessSmarthomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ServerlessSmarthome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ServerlessSmarthome";
+			};
+			name = Release;
+		};
+		C6B3DBD92AE049E50095A46C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4655SQ727H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.ServerlessSmarthomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ServerlessSmarthome;
+			};
+			name = Debug;
+		};
+		C6B3DBDA2AE049E50095A46C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4655SQ727H;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = team.ServerlessSmarthomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ServerlessSmarthome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6B3DBA72AE049E30095A46C /* Build configuration list for PBXProject "ServerlessSmarthome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B3DBD02AE049E50095A46C /* Debug */,
+				C6B3DBD12AE049E50095A46C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6B3DBD22AE049E50095A46C /* Build configuration list for PBXNativeTarget "ServerlessSmarthome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B3DBD32AE049E50095A46C /* Debug */,
+				C6B3DBD42AE049E50095A46C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6B3DBD52AE049E50095A46C /* Build configuration list for PBXNativeTarget "ServerlessSmarthomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B3DBD62AE049E50095A46C /* Debug */,
+				C6B3DBD72AE049E50095A46C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6B3DBD82AE049E50095A46C /* Build configuration list for PBXNativeTarget "ServerlessSmarthomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6B3DBD92AE049E50095A46C /* Debug */,
+				C6B3DBDA2AE049E50095A46C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6B3DBA42AE049E30095A46C /* Project object */;
+}
