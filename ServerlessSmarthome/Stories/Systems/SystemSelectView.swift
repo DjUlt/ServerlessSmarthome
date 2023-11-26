@@ -14,9 +14,17 @@ struct SystemSelectView: View {
     
     @State private var isDeleteAlertPresented = false
     @State private var selectedSmartSystem: SmartSystem?
+    @State private var preselectedSmartSystem: String? = UserDefaults.lastSeenSystem
+    @State private var isGoToLastSeenSystem: Bool = false
     
     var body: some View {
-        VStack {
+        ZStack {
+            if let preselectedSmartSystemValue = smartSystems.first(where: { $0.keyHash.uuidString == preselectedSmartSystem}) {
+                NavigationLink(destination: MainView(smartSystem: preselectedSmartSystemValue), isActive: $isGoToLastSeenSystem) {
+                    Text("")
+                }
+                    .hidden()
+            }
             GeometryReader { geometry in
                 ScrollView {
                     LazyVGrid(columns: [
@@ -24,16 +32,31 @@ struct SystemSelectView: View {
                         GridItem(.fixed((geometry.size.width - 10) / 2 - 10)),
                     ]) {
                         ForEach(smartSystems) { smartSystem in
-                            SystemCardView(system: .constant(smartSystem))
-                                .frame(height: 150)
-                                .contextMenu {
-                                    Button(role: .destructive) {
-                                        selectedSmartSystem = smartSystem
-                                        isDeleteAlertPresented.toggle()
-                                    } label: {
-                                        Label("Delete", systemImage: "xmark.bin.fill")
+                            NavigationLink(destination:
+                                            MainView(smartSystem: smartSystem)
+                                .modelContext(modelContext)
+                            ) {
+                                SystemCardView(system: .constant(smartSystem))
+                                    .frame(height: 150)
+                                    .contextMenu {
+                                        Button(role: .destructive) {
+                                            selectedSmartSystem = smartSystem
+                                            isDeleteAlertPresented.toggle()
+                                        } label: {
+                                            Label("Delete", systemImage: "xmark.bin.fill")
+                                        }
                                     }
-                                }
+                            }
+//                            SystemCardView(system: .constant(smartSystem))
+//                                .frame(height: 150)
+//                                .contextMenu {
+//                                    Button(role: .destructive) {
+//                                        selectedSmartSystem = smartSystem
+//                                        isDeleteAlertPresented.toggle()
+//                                    } label: {
+//                                        Label("Delete", systemImage: "xmark.bin.fill")
+//                                    }
+//                                }
                         }
                     }
                 }
@@ -44,6 +67,9 @@ struct SystemSelectView: View {
             NavigationLink(destination: SystemCreationView()) {
                 Label("", systemImage: "plus.app.fill")
             }
+        }
+        .onAppear {
+            isGoToLastSeenSystem = preselectedSmartSystem != nil
         }
         .alert("Are you sure?", isPresented: $isDeleteAlertPresented) {
             Button(role: .destructive) {
@@ -59,6 +85,14 @@ struct SystemSelectView: View {
                 Label("Cancel", systemImage: "return")
             }
         }
+        // FIXME: not working
+//        .navigationDestination(isPresented: $isGoToLastSeenSystem) {
+//            if let preselectedSmartSystemValue = smartSystems.first(where: { $0.keyHash.uuidString == preselectedSmartSystem}) {
+//                MainView(smartSystem: preselectedSmartSystemValue)
+//            } else {
+//                EmptyView()
+//            }
+//        }
     }
     
     private func deleteItems(smartSystem: SmartSystem) {

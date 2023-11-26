@@ -26,6 +26,7 @@ struct SystemCardPreviewView: View {
         ZStack(alignment: .topLeading) {
             Text(name)
                 .font(.headline)
+                .foregroundStyle(.black)
                 .background(.ultraThinMaterial)
                 .clipShape(.rect(cornerRadius: 4))
                 .padding()

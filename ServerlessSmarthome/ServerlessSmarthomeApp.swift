@@ -13,6 +13,8 @@ struct ServerlessSmarthomeApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             SmartSystem.self,
+            SmartSystemGroup.self,
+            SmartSystemDevice.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

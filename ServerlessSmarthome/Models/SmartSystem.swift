@@ -15,6 +15,8 @@ final class SmartSystem {
     let keyHash: UUID
     let backgroundImageData: Data
     let themeColor: ColorComponents
+    @Relationship(deleteRule: .cascade) var devices: [SmartSystemDevice]
+    @Relationship(deleteRule: .cascade) var groups = [SmartSystemGroup]()
     
     init(timestamp: Date, name: String, keyHash: UUID, backgroundImageData: Data, themeColor: ColorComponents) {
         self.timestamp = timestamp
@@ -22,6 +24,7 @@ final class SmartSystem {
         self.keyHash = keyHash
         self.backgroundImageData = backgroundImageData
         self.themeColor = themeColor
+        self.devices = []
     }
 }
 
