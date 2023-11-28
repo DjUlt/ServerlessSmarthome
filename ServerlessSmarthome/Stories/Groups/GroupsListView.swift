@@ -17,48 +17,53 @@ struct GroupsListView: View {
     @State private var selectedGroup: SmartSystemGroup?
     
     var body: some View {
-        List(smartSystem.groups, rowContent: { group in
-            HStack {
-                Image(systemName: "folder.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 32, height: 32)
-                if let image = UIImage(data: group.backgroundImageData) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .aspectRatio(1, contentMode: .fit)
+        List {
+            ForEach(smartSystem.groups, id: \.self) { group in
+                NavigationLink(destination: GroupDetailsView(group: group)) {
+                    HStack {
+                        Image(systemName: "folder.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 32, height: 32)
+                        if let image = UIImage(data: group.backgroundImageData) {
+                            Image(uiImage: image)
+                                .resizable()
+                                .aspectRatio(1, contentMode: .fit)
+                                .contentShape(Rectangle())
+                                .clipped()
+                        }
+                        Text(group.name)
+                            .lineLimit(1)
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                    }
                 }
-                Text(group.name)
-                    .lineLimit(1)
-                    .font(.title3)
-                    .fontWeight(.semibold)
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 16, height: 16)
-                    .foregroundStyle(.blue)
-            }
-            .onTapGesture {
-                // TODO: Open device details
-            }
-            .swipeActions(edge: .trailing, allowsFullSwipe: true, content: {
-                Button(role: .destructive) {
-                    selectedGroup = group
-                    isDeleteAlertPresented.toggle()
-                } label: {
-                    Label("Delete", systemImage: "xmark.bin.fill")
+                .swipeActions(edge: .trailing, allowsFullSwipe: true, content: {
+                    Button(role: .destructive) {
+                        selectedGroup = group
+                        isDeleteAlertPresented.toggle()
+                    } label: {
+                        Label("Delete", systemImage: "xmark.bin.fill")
+                    }
+                })
+                .contextMenu {
+                    Button(role: .destructive) {
+                        selectedGroup = group
+                        isDeleteAlertPresented.toggle()
+                    } label: {
+                        Label("Delete", systemImage: "xmark.bin.fill")
+                    }
                 }
-            })
-            .contextMenu {
-                Button(role: .destructive) {
-                    selectedGroup = group
-                    isDeleteAlertPresented.toggle()
-                } label: {
-                    Label("Delete", systemImage: "xmark.bin.fill")
+                .id(UUID())
+            }
+            .onMove { from, to in
+                var tempArray = smartSystem.groups
+                tempArray.move(fromOffsets: from, toOffset: to)
+                withAnimation {
+                    smartSystem.groups = tempArray
                 }
             }
-        })
+        }
         .scrollContentBackground(.hidden)
         .navigationTitle("Group selection")
         .toolbar {

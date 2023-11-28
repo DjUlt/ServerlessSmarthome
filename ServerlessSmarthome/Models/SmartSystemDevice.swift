@@ -14,10 +14,15 @@ final class SmartSystemDevice {
     let name: String
     let selfKeyHash: UUID
     let backgroundImageData: Data
+    let colorComponents: ColorComponents
     var parentSystem: SmartSystem?
     var previousDevice: SmartSystemDevice? = nil
     var nextDevice: SmartSystemDevice? = nil
     @Relationship(deleteRule: .cascade) var deviceData: [DeviceData] = []
+    
+    var color: Color {
+        colorComponents.color
+    }
     
     var dataDict: [Date: Float] {
         var dict: [Date: Float] = [:]
@@ -35,11 +40,12 @@ final class SmartSystemDevice {
         return dict
     }
     
-    init(timestamp: Date, name: String, selfKeyHash: UUID, backgroundImageData: Data, parentSystem: SmartSystem?) {
+    init(timestamp: Date, name: String, selfKeyHash: UUID, backgroundImageData: Data, parentSystem: SmartSystem?, colorComponents: ColorComponents) {
         self.timestamp = timestamp
         self.name = name
         self.selfKeyHash = selfKeyHash
         self.backgroundImageData = backgroundImageData
+        self.colorComponents = colorComponents
         self.parentSystem = parentSystem
     }
 }

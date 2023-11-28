@@ -5,7 +5,14 @@
 
     },
     "Add test data" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оновити дані"
+          }
+        }
+      }
     },
     "Are you sure?" : {
       "extractionState" : "manual",
@@ -52,10 +59,24 @@
       }
     },
     "Count" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кількість"
+          }
+        }
+      }
     },
     "Creation time" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Час створення"
+          }
+        }
+      }
     },
     "Delete" : {
       "extractionState" : "manual",
@@ -64,6 +85,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Видалити"
+          }
+        }
+      }
+    },
+    "Device" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пристрій"
           }
         }
       }
@@ -119,6 +150,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Групи"
+          }
+        }
+      }
+    },
+    "Item color" : {
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Колір пристрою"
           }
         }
       }
@@ -179,7 +220,14 @@
       }
     },
     "Statistics" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статистика"
+          }
+        }
+      }
     },
     "System selection" : {
       "extractionState" : "manual",
@@ -193,7 +241,14 @@
       }
     },
     "Value" : {
-
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Значення"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

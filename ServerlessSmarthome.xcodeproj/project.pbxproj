@@ -22,6 +22,12 @@
 		C63D0A2F2B1556D900F72F05 /* DeviceStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D0A2E2B1556D900F72F05 /* DeviceStatisticsView.swift */; };
 		C641AAEA2B0432C100A6F391 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C641AAE92B0432C100A6F391 /* MainView.swift */; };
 		C655152A2AE084C100604D20 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65515292AE084C100604D20 /* ImagePicker.swift */; };
+		C6760CBA2B16809B00F1007A /* GroupDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760CB92B16809B00F1007A /* GroupDetailsView.swift */; };
+		C6760CBC2B1681AA00F1007A /* GroupAddItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760CBB2B1681AA00F1007A /* GroupAddItemsView.swift */; };
+		C6760CBE2B1690A300F1007A /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760CBD2B1690A300F1007A /* UIImage+Ext.swift */; };
+		C6760CC12B16930100F1007A /* GroupStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760CC02B16930100F1007A /* GroupStatisticsView.swift */; };
+		C6760CC32B16938500F1007A /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760CC22B16938500F1007A /* Color+Ext.swift */; };
+		C6760CC52B1693C800F1007A /* SystemStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6760CC42B1693C800F1007A /* SystemStatistics.swift */; };
 		C6B3DBB02AE049E30095A46C /* ServerlessSmarthomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBAF2AE049E30095A46C /* ServerlessSmarthomeApp.swift */; };
 		C6B3DBB22AE049E30095A46C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBB12AE049E30095A46C /* ContentView.swift */; };
 		C6B3DBB42AE049E30095A46C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBB32AE049E30095A46C /* Item.swift */; };
@@ -69,6 +75,12 @@
 		C63D0A2E2B1556D900F72F05 /* DeviceStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatisticsView.swift; sourceTree = "<group>"; };
 		C641AAE92B0432C100A6F391 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C65515292AE084C100604D20 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C6760CB92B16809B00F1007A /* GroupDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailsView.swift; sourceTree = "<group>"; };
+		C6760CBB2B1681AA00F1007A /* GroupAddItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAddItemsView.swift; sourceTree = "<group>"; };
+		C6760CBD2B1690A300F1007A /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		C6760CC02B16930100F1007A /* GroupStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupStatisticsView.swift; sourceTree = "<group>"; };
+		C6760CC22B16938500F1007A /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		C6760CC42B1693C800F1007A /* SystemStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemStatistics.swift; sourceTree = "<group>"; };
 		C6B3DBAC2AE049E30095A46C /* ServerlessSmarthome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServerlessSmarthome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B3DBAF2AE049E30095A46C /* ServerlessSmarthomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerlessSmarthomeApp.swift; sourceTree = "<group>"; };
 		C6B3DBB12AE049E30095A46C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +126,8 @@
 		C62768322B13EF730082665F /* Groups */ = {
 			isa = PBXGroup;
 			children = (
+				C6760CBF2B1692E200F1007A /* GroupStatistics */,
+				C6760CB82B16807700F1007A /* GroupDetails */,
 				C62768332B13EF9D0082665F /* GroupsListView.swift */,
 				C62768352B13F1420082665F /* GroupCreationView.swift */,
 			);
@@ -169,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				C641AAE92B0432C100A6F391 /* MainView.swift */,
+				C6760CC42B1693C800F1007A /* SystemStatistics.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -179,6 +194,23 @@
 				C65515292AE084C100604D20 /* ImagePicker.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C6760CB82B16807700F1007A /* GroupDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C6760CB92B16809B00F1007A /* GroupDetailsView.swift */,
+				C6760CBB2B1681AA00F1007A /* GroupAddItemsView.swift */,
+			);
+			path = GroupDetails;
+			sourceTree = "<group>";
+		};
+		C6760CBF2B1692E200F1007A /* GroupStatistics */ = {
+			isa = PBXGroup;
+			children = (
+				C6760CC02B16930100F1007A /* GroupStatisticsView.swift */,
+			);
+			path = GroupStatistics;
 			sourceTree = "<group>";
 		};
 		C6B3DBA32AE049E30095A46C = {
@@ -212,6 +244,8 @@
 				C6B3DBB32AE049E30095A46C /* Item.swift */,
 				C62C21102B112C63006D3364 /* UserDefaultsService.swift */,
 				C63D0A2B2B1553A900F72F05 /* Date+Ext.swift */,
+				C6760CBD2B1690A300F1007A /* UIImage+Ext.swift */,
+				C6760CC22B16938500F1007A /* Color+Ext.swift */,
 			);
 			path = ServerlessSmarthome;
 			sourceTree = "<group>";
@@ -416,17 +450,23 @@
 				C63D0A2F2B1556D900F72F05 /* DeviceStatisticsView.swift in Sources */,
 				C62768342B13EF9D0082665F /* GroupsListView.swift in Sources */,
 				C6B3DBB22AE049E30095A46C /* ContentView.swift in Sources */,
+				C6760CC12B16930100F1007A /* GroupStatisticsView.swift in Sources */,
+				C6760CBE2B1690A300F1007A /* UIImage+Ext.swift in Sources */,
 				C6B3DBE32AE053740095A46C /* SystemCreationView.swift in Sources */,
 				C62C210F2B112A91006D3364 /* SettingsView.swift in Sources */,
 				C6B3DBB42AE049E30095A46C /* Item.swift in Sources */,
 				C62C21182B13D283006D3364 /* SmartSystemDevice.swift in Sources */,
 				C655152A2AE084C100604D20 /* ImagePicker.swift in Sources */,
 				C6B3DBB02AE049E30095A46C /* ServerlessSmarthomeApp.swift in Sources */,
+				C6760CC32B16938500F1007A /* Color+Ext.swift in Sources */,
 				C62C21162B13D19F006D3364 /* DevicesListView.swift in Sources */,
 				C6B3DBE02AE051070095A46C /* SystemSelectView.swift in Sources */,
+				C6760CBA2B16809B00F1007A /* GroupDetailsView.swift in Sources */,
 				C62768362B13F1420082665F /* GroupCreationView.swift in Sources */,
+				C6760CBC2B1681AA00F1007A /* GroupAddItemsView.swift in Sources */,
 				C63D0A272B154BDD00F72F05 /* DeviceData.swift in Sources */,
 				C63D0A2A2B15519400F72F05 /* DeviceDetailsView.swift in Sources */,
+				C6760CC52B1693C800F1007A /* SystemStatistics.swift in Sources */,
 				C63D0A2C2B1553A900F72F05 /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -59,7 +59,7 @@ struct GroupCreationView: View {
             }
             .background(.white.shadow(.inner(radius: 5)))
             Button {
-                let newSystemDevice = SmartSystemGroup(name: name, backgroundImageData: image.jpegData(compressionQuality: 1) ?? Data(), parentSystem: smartSystem)
+                let newSystemDevice = SmartSystemGroup(name: name, backgroundImageData: image.resizeImage(targetSize: .init(width: 200, height: 200)).jpegData(compressionQuality: 1) ?? Data(), parentSystem: smartSystem)
                 smartSystem.groups.append(newSystemDevice)
                 modelContext.insert(newSystemDevice)
                 dismiss()

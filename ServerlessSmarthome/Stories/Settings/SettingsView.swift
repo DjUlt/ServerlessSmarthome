@@ -24,14 +24,17 @@ struct SettingsView: View {
                 populateTestData()
             }
             .font(.title2)
-            .disabled(timeRemaining > 0)
+            .fontWeight(.semibold)
+            .disabled(timeRemaining > 0 || smartSystem.devices.isEmpty)
             .padding()
             .frame(maxWidth: .infinity)
             .buttonBorderShape(.roundedRectangle(radius: 8))
             .background(Color.white.opacity(0.9))
             .onReceive(timer) { _ in
                 if timeRemaining > 0 {
-                    timeRemaining -= 1
+                    withAnimation {
+                        timeRemaining -= 1
+                    }
                     UserDefaults.lastRefreshTimeout = timeRemaining
                 }
             }

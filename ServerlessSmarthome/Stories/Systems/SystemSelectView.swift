@@ -34,7 +34,6 @@ struct SystemSelectView: View {
                         ForEach(smartSystems) { smartSystem in
                             NavigationLink(destination:
                                             MainView(smartSystem: smartSystem)
-                                .modelContext(modelContext)
                             ) {
                                 SystemCardView(system: .constant(smartSystem))
                                     .frame(height: 150)

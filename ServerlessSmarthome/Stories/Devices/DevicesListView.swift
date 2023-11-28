@@ -24,27 +24,29 @@ struct DevicesListView: View {
                         Image(uiImage: image)
                             .resizable()
                             .aspectRatio(1, contentMode: .fit)
+                            .contentShape(Rectangle())
+                            .clipped()
                     }
                     Text(device.name)
                         .lineLimit(1)
                         .font(.title3)
                         .fontWeight(.semibold)
                 }
-                .swipeActions(edge: .trailing, allowsFullSwipe: true, content: {
-                    Button(role: .destructive) {
-                        selectedItem = device
-                        isDeleteAlertPresented.toggle()
-                    } label: {
-                        Label("Delete", systemImage: "xmark.bin.fill")
-                    }
-                })
-                .contextMenu {
-                    Button(role: .destructive) {
-                        selectedItem = device
-                        isDeleteAlertPresented.toggle()
-                    } label: {
-                        Label("Delete", systemImage: "xmark.bin.fill")
-                    }
+            }
+            .swipeActions(edge: .trailing, allowsFullSwipe: true, content: {
+                Button(role: .destructive) {
+                    selectedItem = device
+                    isDeleteAlertPresented.toggle()
+                } label: {
+                    Label("Delete", systemImage: "xmark.bin.fill")
+                }
+            })
+            .contextMenu {
+                Button(role: .destructive) {
+                    selectedItem = device
+                    isDeleteAlertPresented.toggle()
+                } label: {
+                    Label("Delete", systemImage: "xmark.bin.fill")
                 }
             }
         })

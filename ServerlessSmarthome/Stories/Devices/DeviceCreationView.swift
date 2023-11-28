@@ -20,6 +20,8 @@ struct DeviceCreationView: View {
     
     @State private var showSheet = false
     
+    private let color = Color.random
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -54,12 +56,23 @@ struct DeviceCreationView: View {
                             }
                     }
                     .padding(.vertical)
+                    HStack {
+                        Text("Item color")
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                        color
+                            .blur(radius: 1.6)
+                            .clipShape(.circle)
+                            .padding(.trailing)
+                    }
+                    .padding(.vertical)
+                    .hidden()
                 }
                 .padding()
             }
             .background(.white.shadow(.inner(radius: 5)))
             Button {
-                let newSystemDevice = SmartSystemDevice(timestamp: Date(), name: name, selfKeyHash: UUID(), backgroundImageData: image.jpegData(compressionQuality: 1) ?? Data(), parentSystem: smartSystem)
+                let newSystemDevice = SmartSystemDevice(timestamp: Date(), name: name, selfKeyHash: UUID(), backgroundImageData: image.resizeImage(targetSize: .init(width: 200, height: 200)).jpegData(compressionQuality: 1) ?? Data(), parentSystem: smartSystem, colorComponents: .fromColor(color))
                 smartSystem.devices.append(newSystemDevice)
                 modelContext.insert(newSystemDevice)
                 dismiss()

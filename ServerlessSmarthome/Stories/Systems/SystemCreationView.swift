@@ -87,11 +87,13 @@ struct SystemCreationView: View {
             }
             .background(.white.shadow(.inner(radius: 5)))
             Button {
-                let newSystem = SmartSystem(timestamp: Date(), name: name, keyHash: UUID(), backgroundImageData: image.jpegData(compressionQuality: 1) ?? Data(), themeColor: themeColor)
+                let newSystem = SmartSystem(timestamp: Date(), name: name, keyHash: UUID(), backgroundImageData: image.resizeImage(targetSize: .init(width: 200, height: 200)).jpegData(compressionQuality: 1) ?? Data(), themeColor: themeColor)
                 modelContext.insert(newSystem)
                 dismiss()
             } label: {
                 Text("Save")
+                    .font(.title)
+                    .fontWeight(.bold)
             }
             .disabled(name.isEmpty || image == SystemCreationView.dumbImage)
         }

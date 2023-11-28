@@ -28,8 +28,8 @@ struct MainView: View {
                         }
                             .blur(radius: 4)
                     )
+                    .clipped()
             }
-            .modelContext(modelContext)
             .tabItem {
                 Label("Groups", systemImage: "rectangle.3.group.fill")
             }
@@ -46,8 +46,8 @@ struct MainView: View {
                         }
                             .blur(radius: 4)
                     )
+                    .clipped()
             }
-            .modelContext(modelContext)
             .tabItem {
                 Label("Devices", systemImage: "externaldrive.fill.badge.wifi")
             }
@@ -64,11 +64,18 @@ struct MainView: View {
                         }
                             .blur(radius: 4)
                     )
+                    .clipped()
             }
-            .modelContext(modelContext)
             .tabItem {
                 Label("Settings", systemImage: "gearshape")
             }
+        }
+        .navigationTitle(smartSystem.name)
+        .toolbar {
+            NavigationLink(destination: SystemStatistics(smartSystem: smartSystem)) {
+                Label("", systemImage: "chart.bar.xaxis")
+            }
+            .disabled(smartSystem.devices.flatMap { $0.deviceData }.isEmpty)
         }
         .toolbarBackground(smartSystem.themeColor.color, for: .tabBar)
         .toolbarBackground(smartSystem.themeColor.color, for: .navigationBar)
