@@ -15,6 +15,7 @@ struct ServerlessSmarthomeApp: App {
             SmartSystem.self,
             SmartSystemGroup.self,
             SmartSystemDevice.self,
+            DeviceData.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 

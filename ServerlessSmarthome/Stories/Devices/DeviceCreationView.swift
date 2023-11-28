@@ -65,6 +65,8 @@ struct DeviceCreationView: View {
                 dismiss()
             } label: {
                 Text("Save")
+                    .font(.title)
+                    .fontWeight(.bold)
             }
             .disabled(name.isEmpty || image == DeviceCreationView.dumbImage)
         }

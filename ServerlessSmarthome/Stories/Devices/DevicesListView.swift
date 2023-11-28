@@ -14,54 +14,61 @@ struct DevicesListView: View {
     @Bindable var smartSystem: SmartSystem
     
     @State private var isDeleteAlertPresented = false
-    @State private var selectedSmartSystem: SmartSystem?
+    @State private var selectedItem: SmartSystemDevice?
     
     var body: some View {
         List(smartSystem.devices, rowContent: { device in
-            HStack {
-                if let image = UIImage(data: device.backgroundImageData) {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 128, height: 64)
+            NavigationLink(destination: DeviceDetailsView(device: device)) {
+                HStack {
+                    if let image = UIImage(data: device.backgroundImageData) {
+                        Image(uiImage: image)
+                            .resizable()
+                            .aspectRatio(1, contentMode: .fit)
+                    }
+                    Text(device.name)
+                        .lineLimit(1)
+                        .font(.title3)
+                        .fontWeight(.semibold)
                 }
-                Text(device.name)
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 16, height: 16)
-                    .foregroundStyle(.blue)
-            }
-            .onTapGesture {
-                // TODO: Open device details
+                .swipeActions(edge: .trailing, allowsFullSwipe: true, content: {
+                    Button(role: .destructive) {
+                        selectedItem = device
+                        isDeleteAlertPresented.toggle()
+                    } label: {
+                        Label("Delete", systemImage: "xmark.bin.fill")
+                    }
+                })
+                .contextMenu {
+                    Button(role: .destructive) {
+                        selectedItem = device
+                        isDeleteAlertPresented.toggle()
+                    } label: {
+                        Label("Delete", systemImage: "xmark.bin.fill")
+                    }
+                }
             }
         })
+        .scrollContentBackground(.hidden)
         .navigationTitle("Item selection")
         .toolbar {
             NavigationLink(destination: DeviceCreationView(smartSystem: smartSystem)) {
                 Label("", systemImage: "plus.app.fill")
             }
         }
-//        .alert("Are you sure?", isPresented: $isDeleteAlertPresented) {
-//            Button(role: .destructive) {
-//                guard let selectedSmartSystem else { return }
-//                deleteItems(smartSystem: selectedSmartSystem)
-//                self.selectedSmartSystem = nil
-//            } label: {
-//                Label("Delete", systemImage: "xmark.bin.fill")
-//            }
-//            Button {
-//                selectedSmartSystem = nil
-//            } label: {
-//                Label("Cancel", systemImage: "return")
-//            }
-//        }
+        .alert("Are you sure?", isPresented: $isDeleteAlertPresented) {
+            Button(role: .destructive) {
+                guard let selectedItem else { return }
+                deleteItems(smartSystemDevice: selectedItem)
+                self.selectedItem = nil
+            } label: {
+                Label("Delete", systemImage: "xmark.bin.fill")
+            }
+        }
     }
     
-//    private func deleteItems(smartSystem: SmartSystem) {
-//        withAnimation {
-//            modelContext.delete(smartSystem)
-//        }
-//    }
+    private func deleteItems(smartSystemDevice: SmartSystemDevice) {
+        withAnimation {
+            modelContext.delete(smartSystemDevice)
+        }
+    }
 }

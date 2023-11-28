@@ -15,6 +15,11 @@
 		C62C21182B13D283006D3364 /* SmartSystemDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C21172B13D282006D3364 /* SmartSystemDevice.swift */; };
 		C62C211A2B13D4E4006D3364 /* SmartSystemGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C21192B13D4E4006D3364 /* SmartSystemGroup.swift */; };
 		C62C211C2B13E57B006D3364 /* DeviceCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62C211B2B13E57B006D3364 /* DeviceCreationView.swift */; };
+		C63D0A232B153BDF00F72F05 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C63D0A222B153BDF00F72F05 /* Localizable.xcstrings */; };
+		C63D0A272B154BDD00F72F05 /* DeviceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D0A262B154BDD00F72F05 /* DeviceData.swift */; };
+		C63D0A2A2B15519400F72F05 /* DeviceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D0A292B15519400F72F05 /* DeviceDetailsView.swift */; };
+		C63D0A2C2B1553A900F72F05 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D0A2B2B1553A900F72F05 /* Date+Ext.swift */; };
+		C63D0A2F2B1556D900F72F05 /* DeviceStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63D0A2E2B1556D900F72F05 /* DeviceStatisticsView.swift */; };
 		C641AAEA2B0432C100A6F391 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C641AAE92B0432C100A6F391 /* MainView.swift */; };
 		C655152A2AE084C100604D20 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65515292AE084C100604D20 /* ImagePicker.swift */; };
 		C6B3DBB02AE049E30095A46C /* ServerlessSmarthomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B3DBAF2AE049E30095A46C /* ServerlessSmarthomeApp.swift */; };
@@ -57,6 +62,11 @@
 		C62C21172B13D282006D3364 /* SmartSystemDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSystemDevice.swift; sourceTree = "<group>"; };
 		C62C21192B13D4E4006D3364 /* SmartSystemGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSystemGroup.swift; sourceTree = "<group>"; };
 		C62C211B2B13E57B006D3364 /* DeviceCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCreationView.swift; sourceTree = "<group>"; };
+		C63D0A222B153BDF00F72F05 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		C63D0A262B154BDD00F72F05 /* DeviceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceData.swift; sourceTree = "<group>"; };
+		C63D0A292B15519400F72F05 /* DeviceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceDetailsView.swift; sourceTree = "<group>"; };
+		C63D0A2B2B1553A900F72F05 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		C63D0A2E2B1556D900F72F05 /* DeviceStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceStatisticsView.swift; sourceTree = "<group>"; };
 		C641AAE92B0432C100A6F391 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C65515292AE084C100604D20 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		C6B3DBAC2AE049E30095A46C /* ServerlessSmarthome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServerlessSmarthome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,10 +131,38 @@
 		C62C21122B13D182006D3364 /* Devices */ = {
 			isa = PBXGroup;
 			children = (
+				C63D0A2D2B1556C500F72F05 /* DeviceStatistics */,
+				C63D0A282B15518200F72F05 /* DeviceDetails */,
 				C62C21152B13D19F006D3364 /* DevicesListView.swift */,
 				C62C211B2B13E57B006D3364 /* DeviceCreationView.swift */,
 			);
 			path = Devices;
+			sourceTree = "<group>";
+		};
+		C63D0A212B153BBD00F72F05 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C6B3DBB72AE049E50095A46C /* Preview Content */,
+				C6B3DBB52AE049E50095A46C /* Assets.xcassets */,
+				C63D0A222B153BDF00F72F05 /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C63D0A282B15518200F72F05 /* DeviceDetails */ = {
+			isa = PBXGroup;
+			children = (
+				C63D0A292B15519400F72F05 /* DeviceDetailsView.swift */,
+			);
+			path = DeviceDetails;
+			sourceTree = "<group>";
+		};
+		C63D0A2D2B1556C500F72F05 /* DeviceStatistics */ = {
+			isa = PBXGroup;
+			children = (
+				C63D0A2E2B1556D900F72F05 /* DeviceStatisticsView.swift */,
+			);
+			path = DeviceStatistics;
 			sourceTree = "<group>";
 		};
 		C641AAE82B04325D00A6F391 /* Main */ = {
@@ -166,14 +204,14 @@
 		C6B3DBAE2AE049E30095A46C /* ServerlessSmarthome */ = {
 			isa = PBXGroup;
 			children = (
+				C63D0A212B153BBD00F72F05 /* Resources */,
 				C6B3DBDE2AE050EB0095A46C /* Stories */,
 				C6B3DBDB2AE04EFE0095A46C /* Models */,
 				C6B3DBAF2AE049E30095A46C /* ServerlessSmarthomeApp.swift */,
 				C6B3DBB12AE049E30095A46C /* ContentView.swift */,
 				C6B3DBB32AE049E30095A46C /* Item.swift */,
-				C6B3DBB52AE049E50095A46C /* Assets.xcassets */,
-				C6B3DBB72AE049E50095A46C /* Preview Content */,
 				C62C21102B112C63006D3364 /* UserDefaultsService.swift */,
+				C63D0A2B2B1553A900F72F05 /* Date+Ext.swift */,
 			);
 			path = ServerlessSmarthome;
 			sourceTree = "<group>";
@@ -209,6 +247,7 @@
 				C6B3DBDC2AE050530095A46C /* SmartSystem.swift */,
 				C62C21172B13D282006D3364 /* SmartSystemDevice.swift */,
 				C62C21192B13D4E4006D3364 /* SmartSystemGroup.swift */,
+				C63D0A262B154BDD00F72F05 /* DeviceData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -317,11 +356,12 @@
 			};
 			buildConfigurationList = C6B3DBA72AE049E30095A46C /* Build configuration list for PBXProject "ServerlessSmarthome" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = uk;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				uk,
 			);
 			mainGroup = C6B3DBA32AE049E30095A46C;
 			productRefGroup = C6B3DBAD2AE049E30095A46C /* Products */;
@@ -342,6 +382,7 @@
 			files = (
 				C6B3DBB92AE049E50095A46C /* Preview Assets.xcassets in Resources */,
 				C6B3DBB62AE049E50095A46C /* Assets.xcassets in Resources */,
+				C63D0A232B153BDF00F72F05 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +413,7 @@
 				C641AAEA2B0432C100A6F391 /* MainView.swift in Sources */,
 				C6B3DBE52AE053800095A46C /* SystemCardView.swift in Sources */,
 				C62C211A2B13D4E4006D3364 /* SmartSystemGroup.swift in Sources */,
+				C63D0A2F2B1556D900F72F05 /* DeviceStatisticsView.swift in Sources */,
 				C62768342B13EF9D0082665F /* GroupsListView.swift in Sources */,
 				C6B3DBB22AE049E30095A46C /* ContentView.swift in Sources */,
 				C6B3DBE32AE053740095A46C /* SystemCreationView.swift in Sources */,
@@ -383,6 +425,9 @@
 				C62C21162B13D19F006D3364 /* DevicesListView.swift in Sources */,
 				C6B3DBE02AE051070095A46C /* SystemSelectView.swift in Sources */,
 				C62768362B13F1420082665F /* GroupCreationView.swift in Sources */,
+				C63D0A272B154BDD00F72F05 /* DeviceData.swift in Sources */,
+				C63D0A2A2B15519400F72F05 /* DeviceDetailsView.swift in Sources */,
+				C63D0A2C2B1553A900F72F05 /* Date+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,10 +590,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ServerlessSmarthome/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "ServerlessSmarthome/Resources/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = VTLM3BU8F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Serverless Smart Home";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -574,10 +621,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ServerlessSmarthome/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "ServerlessSmarthome/Resources/Preview\\ Content/Preview\\ Assets.xcassets";
 				DEVELOPMENT_TEAM = VTLM3BU8F9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Serverless Smart Home";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

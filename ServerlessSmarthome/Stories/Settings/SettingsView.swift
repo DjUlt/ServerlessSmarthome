@@ -21,9 +21,14 @@ struct SettingsView: View {
         ScrollView(.vertical, showsIndicators: true) {
             Button("Force refresh system data") {
                 timeRemaining = FileConstants.timerBlockSeconds
-                // TODO: Implement
+                populateTestData()
             }
-            .disabled(timeRemaining <= 0)
+            .font(.title2)
+            .disabled(timeRemaining > 0)
+            .padding()
+            .frame(maxWidth: .infinity)
+            .buttonBorderShape(.roundedRectangle(radius: 8))
+            .background(Color.white.opacity(0.9))
             .onReceive(timer) { _ in
                 if timeRemaining > 0 {
                     timeRemaining -= 1
@@ -32,6 +37,14 @@ struct SettingsView: View {
             }
         }
         .navigationTitle(smartSystem.name)
+    }
+    
+    private func populateTestData() {
+        for device in smartSystem.devices {
+            let newData = DeviceData(value: String(format: "%.2f", Float.random(in: 0...100)), dateStamp: Date(), parentDevice: device)
+            device.deviceData.append(newData)
+            modelContext.insert(newData)
+        }
     }
 }
 

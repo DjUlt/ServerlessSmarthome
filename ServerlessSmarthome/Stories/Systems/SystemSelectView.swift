@@ -69,7 +69,9 @@ struct SystemSelectView: View {
             }
         }
         .onAppear {
-            isGoToLastSeenSystem = preselectedSmartSystem != nil
+            withAnimation {
+                isGoToLastSeenSystem = preselectedSmartSystem != nil
+            }
         }
         .alert("Are you sure?", isPresented: $isDeleteAlertPresented) {
             Button(role: .destructive) {
@@ -78,11 +80,6 @@ struct SystemSelectView: View {
                 self.selectedSmartSystem = nil
             } label: {
                 Label("Delete", systemImage: "xmark.bin.fill")
-            }
-            Button {
-                selectedSmartSystem = nil
-            } label: {
-                Label("Cancel", systemImage: "return")
             }
         }
         // FIXME: not working

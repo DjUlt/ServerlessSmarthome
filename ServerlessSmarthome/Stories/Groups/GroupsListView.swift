@@ -14,7 +14,7 @@ struct GroupsListView: View {
     @Bindable var smartSystem: SmartSystem
     
     @State private var isDeleteAlertPresented = false
-    @State private var selectedSmartSystem: SmartSystem?
+    @State private var selectedGroup: SmartSystemGroup?
     
     var body: some View {
         List(smartSystem.groups, rowContent: { group in
@@ -26,9 +26,12 @@ struct GroupsListView: View {
                 if let image = UIImage(data: group.backgroundImageData) {
                     Image(uiImage: image)
                         .resizable()
-                        .scaledToFit()
+                        .aspectRatio(1, contentMode: .fit)
                 }
                 Text(group.name)
+                    .lineLimit(1)
+                    .font(.title3)
+                    .fontWeight(.semibold)
                 Spacer()
                 Image(systemName: "chevron.right")
                     .resizable()
@@ -39,32 +42,44 @@ struct GroupsListView: View {
             .onTapGesture {
                 // TODO: Open device details
             }
+            .swipeActions(edge: .trailing, allowsFullSwipe: true, content: {
+                Button(role: .destructive) {
+                    selectedGroup = group
+                    isDeleteAlertPresented.toggle()
+                } label: {
+                    Label("Delete", systemImage: "xmark.bin.fill")
+                }
+            })
+            .contextMenu {
+                Button(role: .destructive) {
+                    selectedGroup = group
+                    isDeleteAlertPresented.toggle()
+                } label: {
+                    Label("Delete", systemImage: "xmark.bin.fill")
+                }
+            }
         })
+        .scrollContentBackground(.hidden)
         .navigationTitle("Group selection")
         .toolbar {
             NavigationLink(destination: GroupCreationView(smartSystem: smartSystem)) {
                 Label("", systemImage: "plus.app.fill")
             }
         }
-        //        .alert("Are you sure?", isPresented: $isDeleteAlertPresented) {
-        //            Button(role: .destructive) {
-        //                guard let selectedSmartSystem else { return }
-        //                deleteItems(smartSystem: selectedSmartSystem)
-        //                self.selectedSmartSystem = nil
-        //            } label: {
-        //                Label("Delete", systemImage: "xmark.bin.fill")
-        //            }
-        //            Button {
-        //                selectedSmartSystem = nil
-        //            } label: {
-        //                Label("Cancel", systemImage: "return")
-        //            }
-        //        }
+        .alert("Are you sure?", isPresented: $isDeleteAlertPresented) {
+            Button(role: .destructive) {
+                guard let selectedGroup else { return }
+                deleteItems(smartSystemGroup: selectedGroup)
+                self.selectedGroup = nil
+            } label: {
+                Label("Delete", systemImage: "xmark.bin.fill")
+            }
+        }
     }
     
-    //    private func deleteItems(smartSystem: SmartSystem) {
-    //        withAnimation {
-    //            modelContext.delete(smartSystem)
-    //        }
-    //    }
+    private func deleteItems(smartSystemGroup: SmartSystemGroup) {
+        withAnimation {
+            modelContext.delete(smartSystemGroup)
+        }
+    }
 }

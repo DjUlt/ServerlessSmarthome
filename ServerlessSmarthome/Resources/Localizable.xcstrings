@@ -1,0 +1,200 @@
+{
+  "sourceLanguage" : "uk",
+  "strings" : {
+    "" : {
+
+    },
+    "Add test data" : {
+
+    },
+    "Are you sure?" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ви впевнені?"
+          }
+        }
+      }
+    },
+    "Blue" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Синій"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скасувати"
+          }
+        }
+      }
+    },
+    "Change photo" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Змінити фото"
+          }
+        }
+      }
+    },
+    "Count" : {
+
+    },
+    "Creation time" : {
+
+    },
+    "Delete" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Видалити"
+          }
+        }
+      }
+    },
+    "Devices" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пристрої"
+          }
+        }
+      }
+    },
+    "Force refresh system data" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Примусово оновити інформацію"
+          }
+        }
+      }
+    },
+    "Green" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зелений"
+          }
+        }
+      }
+    },
+    "Group selection" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вибір групи"
+          }
+        }
+      }
+    },
+    "Groups" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Групи"
+          }
+        }
+      }
+    },
+    "Item selection" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вибір пристроїв"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Назва"
+          }
+        }
+      }
+    },
+    "Red" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Червоний"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Зберегти"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Налаштування"
+          }
+        }
+      }
+    },
+    "Statistics" : {
+
+    },
+    "System selection" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вибір системи"
+          }
+        }
+      }
+    },
+    "Value" : {
+
+    }
+  },
+  "version" : "1.0"
+}

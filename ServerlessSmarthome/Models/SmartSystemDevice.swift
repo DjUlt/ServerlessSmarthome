@@ -17,6 +17,23 @@ final class SmartSystemDevice {
     var parentSystem: SmartSystem?
     var previousDevice: SmartSystemDevice? = nil
     var nextDevice: SmartSystemDevice? = nil
+    @Relationship(deleteRule: .cascade) var deviceData: [DeviceData] = []
+    
+    var dataDict: [Date: Float] {
+        var dict: [Date: Float] = [:]
+        for deviceDatum in deviceData {
+            dict[deviceDatum.dateStamp] = deviceDatum.floatValue
+        }
+        return dict
+    }
+    
+    var dataValCountDict: [Int: Int] {
+        var dict: [Int: Int] = [:]
+        for deviceDatum in deviceData {
+            dict[Int(deviceDatum.floatValue)] = (dict[Int(deviceDatum.floatValue)] ?? .zero) + 1
+        }
+        return dict
+    }
     
     init(timestamp: Date, name: String, selfKeyHash: UUID, backgroundImageData: Data, parentSystem: SmartSystem?) {
         self.timestamp = timestamp
